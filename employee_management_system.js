@@ -24,3 +24,14 @@ class Department{ //creates Department class
     getDepartmentSalary(){
         return this.employees.reduce((total, employee) => total + employee.salary, 0); //Calculates the total department salary
     }}
+
+    class Manager extends Employee{
+        constructor(name, salary, position, department, bonus){
+            super(name, salary, "Manager",department); // inherits name, position, salary and department from Employee Class 
+            this.bonus = bonus;
+        }
+        getDetails(){
+            return(`${super.getDetails()}, Bonus: $${this.bonus}`); // Overriding the getDeatils method to include bonus
+        
+        }
+    }

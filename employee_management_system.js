@@ -35,3 +35,12 @@ class Department{ //creates Department class
         
         }
     }
+    // Task 4 begins here
+    calculateTotalSalaryWithBonus();{
+        return this.employees.reduce((total, employee) => {
+            if ('bonus' in Manager) { // checks if there is a bonus
+                return total + employee.salary + employee.bonus; // calculate total salary including bonus
+            }
+            return total + employee.salary; 
+        }, 0 );
+    }

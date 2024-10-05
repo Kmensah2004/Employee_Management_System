@@ -44,3 +44,30 @@ class Department{ //creates Department class
             return total + employee.salary; 
         }, 0 );
     }
+    // Create departments
+const engineering = new Department("HR");
+const marketing = new Department("IT");
+
+// Create employees and managers
+const alice = new Employee("Kosi", 80000, "Developer", "IT");
+const bob = new Employee("Shiv", 75000, "Designer", "IT");
+const charlie = new Manager("Dejalie", 120000, "Manager", "HR", 20000);
+const diana = new Manager("Raymond", 130000, "Manager", "HR", 25000);
+
+// Add employees to their respective departments
+engineering.addEmployee(Kosi);
+engineering.addEmployee(Shiv);
+marketing.addEmployee(Dejalie);
+marketing.addEmployee(Raymond);
+
+// Print employee details
+console.log(Kosi.getDetails()); 
+console.log(Shiv.getDetails()); 
+console.log(Dejalie.getDetails()); 
+console.log(Raymond.getDetails()); 
+
+// Calculate total salary for each department
+console.log(`Total salary for IT: $${engineering.getDepartmentSalary()}`);
+console.log(`Total salary with bonuses for IT: $${engineering.calculateTotalSalaryWithBonus()}`);
+console.log(`Total salary for HR: $${marketing.getDepartmentSalary()}`);
+console.log(`Total salary with bonuses for HR: $${marketing.calculateTotalSalaryWithBonus()}`);

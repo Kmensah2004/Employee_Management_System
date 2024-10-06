@@ -38,7 +38,6 @@ class Department{
     getDepartmentSalary(){
         return this.employees.reduce((total, employee) => total + employee.salary, 0); //Calculates the total department salary
     }
-
     calculateTotalSalaryWithBonus(){ //method to calculate bonus
         return this.employees.reduce((total, employee) => {
             if (employee in Manager) { // includes managers
